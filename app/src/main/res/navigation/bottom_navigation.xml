@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/fragmentHome2">
+
+    <fragment
+        android:id="@+id/fragmentHome2"
+        android:name="com.example.ecommerceapp.presentation.fragments.FragmentHome"
+        android:label="FragmentHome"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_fragmentHome2_to_fragmentDetails"
+            app:destination="@id/fragmentDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCart2"
+        android:name="com.example.ecommerceapp.presentation.fragments.FragmentCart"
+        android:label="FragmentCart"
+        tools:layout="@layout/fragment_cart">
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProfile2"
+        android:name="com.example.ecommerceapp.presentation.fragments.FragmentProfile"
+        android:label="FragmentProfile"
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/fragmentDetails"
+        android:name="com.example.ecommerceapp.presentation.fragments.FragmentDetails"
+        android:label="FragmentDetails"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/black"
+    android:background="#D0D0D0">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#131312"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="SHOPSHI"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:titleTextColor="@android:color/white" />
+
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@android:drawable/editbox_background"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:hint="Search ..."
+            android:padding="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <!-- Banner Image -->
+        <ImageView
+            android:id="@+id/banner_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/banner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_bar" />
+
+
+        <TextView
+            android:id="@+id/ctgrManClth"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="12dp"
+            android:background="#131312"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:padding="20dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="men's clothing"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/blackLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/banner_image" />
+
+        <TextView
+            android:id="@+id/ctgrWmnClth"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="12dp"
+            android:background="#131312"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:padding="20dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="women's clothing"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/blackLine"
+            app:layout_constraintStart_toEndOf="@+id/ctgrManClth"
+            app:layout_constraintTop_toBottomOf="@+id/banner_image" />
+
+        <TextView
+            android:id="@+id/ctgrJwlry"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="12dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="80dp"
+            android:background="#131312"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:padding="20dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="jewelery"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/blackLine"
+            app:layout_constraintEnd_toStartOf="@+id/ctgrElctrs"
+            app:layout_constraintStart_toEndOf="@+id/ctgrWmnClth"
+            app:layout_constraintTop_toBottomOf="@+id/banner_image" />
+
+
+        <TextView
+            android:id="@+id/ctgrElctrs"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="#131312"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:padding="20dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="electronics"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/blackLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/banner_image" />
+
+        <ImageView
+            android:id="@+id/blackLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/shape_black_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ctgrElctrs" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/gridRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:padding="8dp"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/blackLine"
+            app:layout_constraintVertical_bias="1.0"
+            app:spanCount="2"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_layout_vertical_preview" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

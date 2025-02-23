@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:padding="8dp"
+    android:background="@color/black"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <!-- Product Image -->
+    <ImageView
+        android:id="@+id/itemImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_sample_bag"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <!-- Product Title -->
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:scrollHorizontally="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:padding="16dp"
+        android:paddingTop="8dp"
+        android:text="Checkerboard Slip Ons"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemImage" />
+
+    <!-- Product Price -->
+    <TextView
+        android:id="@+id/itemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$ 899"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/itemName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingTop="8dp"/>
+
+    <!-- Cart Button -->
+    <ImageButton
+        android:id="@+id/buttonCart"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:background="@drawable/shape_cart"
+        android:contentDescription="Add to cart"
+        android:src="@drawable/ic_cart"
+        app:layout_constraintBottom_toBottomOf="@id/itemPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemPrice" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
