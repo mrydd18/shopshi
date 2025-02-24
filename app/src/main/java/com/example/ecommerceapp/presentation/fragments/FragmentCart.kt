@@ -1,6 +1,7 @@
 package com.example.ecommerceapp.presentation.fragments
 
 import android.app.AlertDialog
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +16,7 @@ import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 import android.util.Log
+import com.example.ecommerceapp.R
 import com.example.ecommerceapp.presentation.adapters.CartAdapter
 import com.example.ecommerceapp.presentation.viewModels.CartViewModel
 
@@ -44,6 +46,7 @@ class FragmentCart : Fragment() {
         prepareRecyclerView()
         setListeners()
         setCollectors()
+
     }
 
     private fun prepareRecyclerView() {
@@ -75,6 +78,24 @@ class FragmentCart : Fragment() {
                 }
                 .show()
         }
+
+        binding.buttonCheckout.setOnClickListener {
+            AlertDialog.Builder(requireContext())
+                .setTitle("Confirm Purchase")
+                .setMessage("Are you sure you want to complete this purchase? This will remove all items from your cart.")
+                .setPositiveButton("Yes") { _, _ ->
+
+                    val mediaPlayer = MediaPlayer.create(requireContext(), R.raw.purchase_success)
+                    mediaPlayer.start()
+
+                    viewModel.deleteAllSavedItems()
+                }
+                .setNegativeButton("No") { dialog, _ ->
+                    dialog.dismiss()
+                }
+                .show()
+        }
+
     }
 
     private fun setCollectors() {

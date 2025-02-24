@@ -16,7 +16,6 @@ data class ProductDto(
 
 data class RatingDto(
     val rate: Double?,
-    val count: Int?
 )
 
 

@@ -11,7 +11,7 @@ import com.example.ecommerceapp.R
 import com.example.ecommerceapp.databinding.ItemLayoutVerticalPreviewBinding
 import com.example.ecommerceapp.domain.model.Product
 
-class ProductsAdapter() : ListAdapter<Product, ProductsAdapter.ProductsViewHolder>(ProductCallBack()) {
+class ProductsAdapter : ListAdapter<Product, ProductsAdapter.ProductsViewHolder>(ProductCallBack()) {
 
     var onItemClick : (Product) -> Unit = {}
     var onAddToCartClick : (Product) -> Unit ={}

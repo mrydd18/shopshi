@@ -26,7 +26,7 @@ class FragmentProfile : Fragment() {
 
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
 
-        // Set up the Sign Out button click listener
+
         binding.buttonSignOut.setOnClickListener {
             signOutUser()
         }

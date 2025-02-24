@@ -46,4 +46,16 @@ class CartViewModel(
         }
 
     }
+
+    fun deleteAllSavedItems() = viewModelScope.launch {
+
+        when(val status = repository.deleteAllSavedItems()) {
+            is OperationStatus.Failure -> {
+                _showError.emit(status.exception.toString())
+            }
+            is OperationStatus.Success -> {
+                showAllAddedProduct()
+            }
+        }
+    }
 }

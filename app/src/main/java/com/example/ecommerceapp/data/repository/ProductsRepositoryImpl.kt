@@ -1,6 +1,7 @@
 package com.example.ecommerceapp.data.repository
 
 import com.example.ecommerceapp.core.ApiCallHelper
+import com.example.ecommerceapp.core.Constants
 import com.example.ecommerceapp.core.OperationStatus
 import com.example.ecommerceapp.core.RoomCallHelper
 import com.example.ecommerceapp.core.map
@@ -47,6 +48,23 @@ class ProductsRepositoryImpl(
         }
 
     }
+
+    override suspend fun getItemById(productId: Int): OperationStatus<Product> {
+        return ApiCallHelper.safeApiCall {
+            service.getItemById(
+                productId = productId,
+                apiKey = Constants.API_KEY
+            )
+        }.map { productDto -> productDto.toProduct() }
+    }
+
+    override suspend fun deleteAllSavedItems(): OperationStatus<Unit> {
+        return RoomCallHelper.safeRoomCall {
+            productsDao.deleteAllSavedItems()
+            Unit
+        }
+    }
+
 
 
 }

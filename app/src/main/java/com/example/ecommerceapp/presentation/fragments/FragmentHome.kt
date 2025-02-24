@@ -31,7 +31,7 @@ class FragmentHome : Fragment() {
         Log.d(
             "FragmentHome",
             "onCreateView: Initializing binding"
-        )  // Log when onCreateView is called
+        )
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -44,7 +44,7 @@ class FragmentHome : Fragment() {
         Log.d(
             "FragmentHome",
             "onViewCreated: Setting up the recycler view"
-        )  // Log when the view is created
+        )
         prepareGridRecyclerView()
         setCollectors()
         setListeners()
@@ -56,7 +56,7 @@ class FragmentHome : Fragment() {
         Log.d(
             "FragmentHome",
             "prepareGridRecyclerView: Setting up GridLayoutManager"
-        )  // Log when preparing the RecyclerView
+        )
         binding.gridRecyclerView.adapter = productsAdapter
     }
 
@@ -66,7 +66,7 @@ class FragmentHome : Fragment() {
         viewLifecycleOwner.lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.allProductsList.collect { products ->
-                    Log.d("FragmentHome", "setCollectors: Received product list, size: ${products}")
+                    Log.d("FragmentHome", "setCollectors: Received product list, size: $products")
 
                         productsAdapter.submitList(products.toList())
 
@@ -81,6 +81,14 @@ class FragmentHome : Fragment() {
     private fun setListeners() {
         productsAdapter.onAddToCartClick = {item ->
             viewModel.saveToCart(item)
+        }
+
+        productsAdapter.onItemClick = { item ->
+            item.id?.let { id ->
+                findNavController().navigate(
+                    FragmentHomeDirections.actionFragmentHome2ToFragmentDetails(id)
+                )
+            }
         }
     }
 }

@@ -21,7 +21,7 @@ class EcommerceApp : Application() {
                 viewModelModule,
                 repositoryModule,
                 roomModule,
-                //useCaseModule
+
             )
         }
     }

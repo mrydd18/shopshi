@@ -19,4 +19,9 @@ interface ProductsDao {
     @Query("SELECT * FROM products_tables")
     suspend fun getAllSavedCart(): List<ProductsDbo>
 
+    @Query("DELETE  FROM products_tables")
+    suspend fun deleteAllSavedItems(): Unit
+
+
+
 }

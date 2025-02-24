@@ -14,7 +14,7 @@ val roomModule = module {
         ).build()
     }
 
-    // Provide the MovieDao instance
+    
     single {
         get<ProductsDatabases>().productsDao
     }

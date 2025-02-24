@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.ecommerceapp.R
 import com.example.ecommerceapp.databinding.FragmentSigninBinding
 import com.google.firebase.auth.FirebaseAuth
 
