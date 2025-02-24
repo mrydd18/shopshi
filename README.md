@@ -12,14 +12,14 @@ SHOPSHI is a modern shopping app built with **Kotlin** and **Firebase**. It allo
 
 ## 📸 Screenshots
 
-![App Screenshot](desktop/gitreadmescreens/firstpage)
-![App Screenshot](desktop/gitreadmescreens/signinpage)
-![App Screenshot](desktop/gitreadmescreens/registerpage)
-![App Screenshot](desktop/gitreadmescreens/forgotpassword)
-![App Screenshot](desktop/gitreadmescreens/mainpage)
-![App Screenshot](desktop/gitreadmescreens/detailspage)
-![App Screenshot](desktop/gitreadmescreens/cart)
-![App Screenshot](desktop/gitreadmescreens/profilepage)
+![App Screenshot](C:\Users\mrydd17\OneDrive\Desktop\git_read_me_screens/first_page)
+![App Screenshot](C:\Users\mrydd17\OneDrive\Desktop\git_read_me_screens/signin_page)
+![App Screenshot](C:\Users\mrydd17\OneDrive\Desktop\git_read_me_screens/register_page)
+![App Screenshot](C:\Users\mrydd17\OneDrive\Desktop\git_read_me_screens/forgot_password)
+![App Screenshot](C:\Users\mrydd17\OneDrive\Desktop\git_read_me_screens/main_page)
+![App Screenshot](C:\Users\mrydd17\OneDrive\Desktop\git_read_me_screens/details_page)
+![App Screenshot](C:\Users\mrydd17\OneDrive\Desktop\git_read_me_screens/cart)
+![App Screenshot](C:\Users\mrydd17\OneDrive\Desktop\git_read_me_screens/profile_page)
 
 
 
